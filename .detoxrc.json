@@ -1,0 +1,21 @@
+{
+  "testRunner": "jest",
+  "runnerConfig": "e2e/config.json",
+  "configurations": {
+    "ios.debug": {
+      "type": "ios.simulator",
+      "build": "npx react-native run-ios --simulator='iPhone SE (2nd generation)'",
+      "binaryPath": "/Users/iradkotton/Library/Developer/Xcode/DerivedData/loginE2EDemo-gjfcjjkrklzdthgbkzvaaexwbqnd/Build/Products/Debug-iphonesimulator/loginE2EDemo.app",
+      "device": {
+        "type": "iPhone SE (2nd generation)"
+      }
+    },
+    "android": {
+      "type": "android.emulator",
+      "binaryPath": "SPECIFY_PATH_TO_YOUR_APP_BINARY",
+      "device": {
+        "avdName": "Pixel_2_API_29"
+      }
+    }
+  }
+}
