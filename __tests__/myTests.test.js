@@ -1,5 +1,5 @@
 import wd from 'wd';
-jasmine.DEFAULT_TIMEOUT_INTERVAL = 3000;
+jasmine.DEFAULT_TIMEOUT_INTERVAL = 60000;
 const PORT = 4723;
 const config = {
     platformName: 'Android',
@@ -9,12 +9,17 @@ const config = {
 const driver = wd.promiseChainRemote('localhost', PORT);
 beforeAll(async () => {
     await driver.init(config);
-    await driver.sleep(3000);
+    await driver.sleep(4000);
 })
-test('my first appium test', async () => {
+test('should have myContainer', async () => {
+    expect(await driver.hasElementByAccessibilityId('myContainer')).toBe(true)
     // expect(await driver.hasElementByAccessibilityId(‘alertButton’)).toBe(true);
     // const element = await driver.elementByAccessibilityId(‘alertButton’)
     // await element.click()
     // expect(await driver.hasElementByAccessibilityId(‘notHere’)).toBe(false);
-    expect(await driver.element('testId', 'myContainer')).toBe(true);
+});
+test('should be able to fill input', async () => {
+    const element = await driver.elementByAccessibilityId('myInput');
+    await element.click();
+    // expect(await driver.hasElementByAccessibilityId(‘notHere’)).toBe(false);
 });

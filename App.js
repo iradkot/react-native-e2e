@@ -24,6 +24,7 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         <View style={{ height: "100%", alignItems: "center", justifyContent: "center", backgroundColor: "aliceblue" }}
+              accessibilityLabel='myContainer'
               testID="myContainer">
           <TextInput
             style={{
@@ -31,18 +32,18 @@ const App: () => React$Node = () => {
             minWidth: 200,
             borderColor: "gray",
             borderWidth: 1,
-            placeholderTextColor: "gray",
           }}
             onChangeText={text => setTextInputValue(text)}
             value={textInputValue}
             placeholder="Insert your text!"
             testID="myInput"
+            accessibilityLabel='myInput'
           />
           <Button
             onPress={() => setTextInputValue('')}
             title="Clear text"
             color="#841584"
-            accessibilityLabel="Learn more about this purple button"
+            accessibilityLabel="myButton"
             testID="myButton"
           />
         </View>

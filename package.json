@@ -20,7 +20,7 @@
     "appium-doctor": "^1.16.0",
     "react": "16.13.1",
     "react-native": "0.63.4",
-    "wd": "^1.14.0"
+    "wd": "^1.12.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
