@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "e2e:ios-build": "detox build --configuration ios.debug",
     "e2e:ios-test": "detox test -c ios.debug",
-    "e2e:ios-test-reuse": "detox test -c ios.debug --reuse"
+    "e2e:ios-test-reuse": "detox test -c ios.debug --reuse",
+    "e2e:android-build": "detox build --configuration android.debug",
+    "e2e:android-test": "detox test -c android.debug",
+    "e2e:android-test-reuse": "detox test -c android.debug --reuse"
   },
   "dependencies": {
     "react": "16.13.1",
